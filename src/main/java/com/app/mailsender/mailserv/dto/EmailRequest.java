@@ -1,10 +1,21 @@
 package com.app.mailsender.mailserv.dto;
 
+import java.util.List;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class EmailRequest {
     private String destinatario;
     private String asunto;
     private String mensaje;
+    private List<MultipartFile> attachments;
     
+    public void setAttachments(List<MultipartFile> attachments) {
+        this.attachments = attachments;
+    }
+    public List<MultipartFile> getAttachments() {
+        return attachments;
+    }
     public String getDestinatario() {
         return destinatario;
     }
